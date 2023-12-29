@@ -43,9 +43,6 @@ namespace Ex
         }
         public SafeguardMethodException(string message, Exception innerException)
             : base(message, innerException) {}
-        protected SafeguardMethodException
-            (SerializationInfo info, StreamingContext context)
-            : base(info, context) {}
         public int HttpStatusCode { get; set; }
         public int ErrorCode { get; set; }
         public string ErrorMessage { get; set; }
@@ -231,9 +228,6 @@ namespace Ex
                 list.Add(new SafeguardTaskLog(entry));
             TaskLog = list.ToArray();
         }
-        protected SafeguardLongRunningTaskException
-            (SerializationInfo info, StreamingContext context)
-            : base(info, context) {}
         public SafeguardTaskLog[] TaskLog { get; set; }
     }
 }
