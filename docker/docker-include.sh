@@ -31,8 +31,11 @@ get_safeguard_dockerfile()
     centos | centos7)
         DockerFile="Dockerfile_centos7"
         ;;
-    alpine | alpine3.8)
+    alpine3.8)
         DockerFile="Dockerfile_alpine3.8"
+        ;;
+    alpine | alpine3.17)
+        DockerFile="Dockerfile_alpine3.17"
         ;;
     opensuse | opensuse42.3)
         DockerFile="Dockerfile_opensuse42.3"
